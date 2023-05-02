@@ -15,10 +15,10 @@ public class FundingRaised {
 
         csvData.remove(0);
 
-        if(options.containsKey("company_name")) {
+        if (options.containsKey("company_name")) {
             List<List<String>> results = new ArrayList<> ();
 
-            for(int i = 0; i < csvData.size(); i++) {
+            for (int i = 0; i < csvData.size(); i++) {
                 if(csvData.get(i).get(1).equals(options.get("company_name"))) {
                     results.add(csvData.get(i));
                 }
@@ -26,10 +26,10 @@ public class FundingRaised {
             csvData = results;
         }
 
-        if(options.containsKey("city")) {
+        if (options.containsKey("city")) {
             List<List<String>> results = new ArrayList<> ();
 
-            for(int i = 0; i < csvData.size(); i++) {
+            for (int i = 0; i < csvData.size(); i++) {
                 if(csvData.get(i).get(4).equals(options.get("city"))) {
                     results.add(csvData.get(i));
                 }
@@ -37,10 +37,10 @@ public class FundingRaised {
             csvData = results;
         }
 
-        if(options.containsKey("state")) {
+        if (options.containsKey("state")) {
             List<List<String>> results = new ArrayList<> ();
 
-            for(int i = 0; i < csvData.size(); i++) {
+            for (int i = 0; i < csvData.size(); i++) {
                 if(csvData.get(i).get(5).equals(options.get("state"))) {
                     results.add(csvData.get(i));
                 }
@@ -48,10 +48,10 @@ public class FundingRaised {
             csvData = results;
         }
 
-        if(options.containsKey("round")) {
+        if (options.containsKey("round")) {
             List<List<String>> results = new ArrayList<> ();
 
-            for(int i = 0; i < csvData.size(); i++) {
+            for (int i = 0; i < csvData.size(); i++) {
                 if (csvData.get(i).size() != 10) {
                     System.out.println("Error: " + i);
                 }
@@ -65,7 +65,7 @@ public class FundingRaised {
 
         List<Map<String, String>> output = new ArrayList<>();
 
-        for(int i = 0; i < csvData.size(); i++) {
+        for (int i = 0; i < csvData.size(); i++) {
             Map<String, String> mapped = new HashMap<> ();
             mapped.put("permalink", csvData.get(i).get(0));
             mapped.put("company_name", csvData.get(i).get(1));
@@ -106,8 +106,8 @@ public class FundingRaised {
 
         Map<String, String> mapped = new HashMap<> ();
 
-        for(int i = 0; i < csvData.size(); i++) {
-            if(options.containsKey("company_name")) {
+        for (int i = 0; i < csvData.size(); i++) {
+            if (options.containsKey("company_name")) {
                 if(csvData.get(i).get(1).equals(options.get("company_name"))) {
                     mapped.put("permalink", csvData.get(i).get(0));
                     mapped.put("company_name", csvData.get(i).get(1));
@@ -124,7 +124,7 @@ public class FundingRaised {
                 }
             }
 
-            if(options.containsKey("city")) {
+            if (options.containsKey("city")) {
                 if(csvData.get(i).get(4).equals(options.get("city"))) {
                     mapped.put("permalink", csvData.get(i).get(0));
                     mapped.put("company_name", csvData.get(i).get(1));
@@ -141,7 +141,7 @@ public class FundingRaised {
                 }
             }
 
-            if(options.containsKey("state")) {
+            if (options.containsKey("state")) {
                 if(csvData.get(i).get(5).equals(options.get("state"))) {
                     mapped.put("permalink", csvData.get(i).get(0));
                     mapped.put("company_name", csvData.get(i).get(1));
@@ -158,7 +158,7 @@ public class FundingRaised {
                 }
             }
 
-            if(options.containsKey("round")) {
+            if (options.containsKey("round")) {
                 if(csvData.get(i).get(9).equals(options.get("round"))) {
                     mapped.put("permalink", csvData.get(i).get(0));
                     mapped.put("company_name", csvData.get(i).get(1));
