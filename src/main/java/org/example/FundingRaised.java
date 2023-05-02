@@ -180,18 +180,6 @@ public class FundingRaised {
 
         throw new NoSuchEntryException();
     }
-
-    public static void main(String[] args) {
-        try {
-            Map<String, String> options = new HashMap<String, String> ();
-            options.put("company_name", "Facebook");
-            options.put("round", "a");
-            System.out.print(new FundingRaised().where(options).size());
-        } catch(IOException e) {
-            System.out.print(e.getMessage());
-            System.out.print("error");
-        }
-    }
 }
 
 class NoSuchEntryException extends Exception {}
