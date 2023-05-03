@@ -27,7 +27,7 @@ public class FundingRaised {
             List<List<String>> results = new ArrayList<> ();
 
             for (int i = 0; i < csvData.size(); i++) {
-                if(csvData.get(i).get(1).equals(options.get("company_name"))) {
+                if (csvData.get(i).get(1).equals(options.get("company_name"))) {
                     results.add(csvData.get(i));
                 }
             }
@@ -38,7 +38,7 @@ public class FundingRaised {
             List<List<String>> results = new ArrayList<> ();
 
             for (int i = 0; i < csvData.size(); i++) {
-                if(csvData.get(i).get(4).equals(options.get("city"))) {
+                if (csvData.get(i).get(4).equals(options.get("city"))) {
                     results.add(csvData.get(i));
                 }
             }
@@ -49,7 +49,7 @@ public class FundingRaised {
             List<List<String>> results = new ArrayList<> ();
 
             for (int i = 0; i < csvData.size(); i++) {
-                if(csvData.get(i).get(5).equals(options.get("state"))) {
+                if (csvData.get(i).get(5).equals(options.get("state"))) {
                     results.add(csvData.get(i));
                 }
             }
@@ -60,7 +60,7 @@ public class FundingRaised {
             List<List<String>> results = new ArrayList<> ();
 
             for (int i = 0; i < csvData.size(); i++) {
-                if(csvData.get(i).get(9).equals(options.get("round"))) {
+                if (csvData.get(i).get(9).equals(options.get("round"))) {
                     results.add(csvData.get(i));
                 }
             }
