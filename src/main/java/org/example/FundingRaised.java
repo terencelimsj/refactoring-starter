@@ -60,10 +60,6 @@ public class FundingRaised {
             List<List<String>> results = new ArrayList<> ();
 
             for (int i = 0; i < csvData.size(); i++) {
-                if (csvData.get(i).size() != 10) {
-                    System.out.println("Error: " + i);
-                }
-
                 if(csvData.get(i).get(9).equals(options.get("round"))) {
                     results.add(csvData.get(i));
                 }
