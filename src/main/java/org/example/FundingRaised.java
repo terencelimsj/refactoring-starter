@@ -9,7 +9,15 @@ public class FundingRaised {
         List<List<String>> csvData = new ArrayList<>();
         try (Scanner scanner = new Scanner(new File(getClass().getResource("/startup_funding.csv").getPath()))) {
             while (scanner.hasNextLine()) {
-                csvData.add(getRecordFromLine(scanner.nextLine()));
+                String line = scanner.nextLine();
+                List<String> values = new ArrayList<String>();
+                try (Scanner rowScanner = new Scanner(line)) {
+                    rowScanner.useDelimiter(",");
+                    while (rowScanner.hasNext()) {
+                        values.add(rowScanner.next());
+                    }
+                }
+                csvData.add(values);
             }
         }
 
@@ -83,22 +91,19 @@ public class FundingRaised {
         return output;
     }
 
-    private List<String> getRecordFromLine(String line) {
-        List<String> values = new ArrayList<String>();
-        try (Scanner rowScanner = new Scanner(line)) {
-            rowScanner.useDelimiter(",");
-            while (rowScanner.hasNext()) {
-                values.add(rowScanner.next());
-            }
-        }
-        return values;
-    }
-
     public Map<String, String> findBy(Map<String, String> options) throws IOException, NoSuchEntryException {
         List<List<String>> csvData = new ArrayList<>();
         try (Scanner scanner = new Scanner(new File(getClass().getResource("/startup_funding.csv").getPath()))) {
             while (scanner.hasNextLine()) {
-                csvData.add(getRecordFromLine(scanner.nextLine()));
+                String line = scanner.nextLine();
+                List<String> values = new ArrayList<String>();
+                try (Scanner rowScanner = new Scanner(line)) {
+                    rowScanner.useDelimiter(",");
+                    while (rowScanner.hasNext()) {
+                        values.add(rowScanner.next());
+                    }
+                }
+                csvData.add(values);
             }
         }
 
