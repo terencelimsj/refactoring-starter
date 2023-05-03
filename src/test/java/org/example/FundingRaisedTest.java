@@ -1,6 +1,5 @@
 package org.example;
 
-import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
@@ -8,9 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class FundingRaisedTest {
+
     @Test
     public void testWhereGivenCompany() throws IOException {
         Map<String, String> options = new HashMap<String, String>();
