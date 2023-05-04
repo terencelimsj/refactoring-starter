@@ -9,6 +9,9 @@ build/
 .idea/jarRepositories.xml
 .idea/compiler.xml
 .idea/libraries/
+.idea/gradle.xml
+.idea/uiDesigner.xml
+.idea/vcs.xml
 *.iws
 *.iml
 *.ipr
