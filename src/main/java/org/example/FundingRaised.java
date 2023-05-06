@@ -10,7 +10,7 @@ public class FundingRaised {
         try (Scanner scanner = new Scanner(new File(getClass().getResource("/startup_funding.csv").getPath()))) {
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
-                List<String> values = new ArrayList<String>();
+                List<String> values = new ArrayList<>();
                 try (Scanner rowScanner = new Scanner(line)) {
                     rowScanner.useDelimiter(",");
                     while (rowScanner.hasNext()) {
