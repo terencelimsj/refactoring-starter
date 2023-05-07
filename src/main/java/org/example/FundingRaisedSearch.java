@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.*;
 
-public class FundingRaised {
+public class FundingRaisedSearch {
     public List<Map<String, String>> where(Map<String, String> options) throws IOException {
         List<List<String>> csvData = new ArrayList<>();
         try (Scanner scanner = new Scanner(new File(getClass().getResource("/startup_funding.csv").getPath()))) {
